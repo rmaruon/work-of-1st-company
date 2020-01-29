@@ -4,32 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1社目の職務内容</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-colorschemes"></script>
   </head>
 
   <body>
     <h1>1社目の職務内容</h1>
-    <p>割合は、実績時間をもとに算出しています。</p>
-    <p>実績時間は表記していません。</p>
-    <p>在籍期間は3年です。</p>
+    <p>1社目の職務内容を大まかに把握してもらうためのページです。</p>
+    <p>職務経歴書だけだと費やした時間が伝わりづらいので、このページを作りました。</p>
     <strong>注意事項</strong>
     <ul>
-      <li>個人が集計したデータであるため、1分1秒まで正確なデータではありません。</li>
+      <li>実績時間をもとに割合を算出しています。</li>
+      <li>実績時間は表記していません（参考：在籍期間は3年）。</li>
+      <li>1分1秒まで正確なデータではありません。</li>
     </ul>
 
     <section>
       <h2>直接作業と間接作業</h2>
+      <div class="f-container">
+        <div class="chart-container">
+          <canvas id="directAndIndirectWorkChart"></canvas>
+        </div>
+        <div class="description">
+          <p>約75%の時間を直接作業、約25%の時間を間接作業に充てていました。</p>
+        </div>
+      </div>
     </section>
+
     <section>
       <h2>直接作業</h2>
-      <h3>役割</h3>
-      <h3>メイン開発言語</h3>
-      <h3>DBMS</h3>
+
+      <section>
+        <h3>フェーズ</h3>
+        <div class="f-container">
+          <div class="chart-container">
+            <canvas id="directWorkChart"></canvas>
+          </div>
+          <div class="description">
+            <p>
+              ウォーターフォール開発における詳細設計・開発・単体テストを主に担当していました。
+            </p>
+            <p>
+              「テスト」は、結合テストやシステムテストなどを指しています。単体テストは「実装」に含まれています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>役割</h3>
+        <div class="f-container">
+          <div class="chart-container">
+            <canvas id="roleChart"></canvas>
+          </div>
+          <div class="description">
+            <p>リーダー、メンバーそれぞれ半々くらいの時間を経験しました。</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>メイン開発言語</h3>
+        <div class="f-container">
+          <div class="chart-container">
+            <canvas id="programmingLanguageChart"></canvas>
+          </div>
+          <div class="description">
+            <p>主に有償のRADツールを使用していました。</p>
+            <p>
+              アプリケーションの一部をC#やVB.NETで実装したことはありますが、メインの開発言語として使ったことはありません。
+            </p>
+            <p>ツールとしてPythonやPowerShellを使用していました。</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>DBMS</h3>
+        <div class="f-container">
+          <div class="chart-container">
+            <canvas id="DBMSChart"></canvas>
+          </div>
+          <div class="description">
+            <p>主にOracle Databaseを使用していました。</p>
+            <p>データベースの構築、移行設計、データ移行の経験があります。</p>
+          </div>
+        </div>
+      </section>
     </section>
+
     <section>
       <h2>間接作業</h2>
+      <div class="f-container">
+        <div class="chart-container">
+          <canvas id="indirectChart"></canvas>
+        </div>
+        <div class="description">
+          <p>
+            新入社員教育では、新しくソフトウェアテスト教育を導入しました。ISTQBシラバスに基づいて、資料を作成しました。
+          </p>
+          <p>ドキュメンテーション文化を根付かせるために、社内に情報共有サービスを導入しました。</p>
+        </div>
+      </div>
     </section>
-    <section>
-      <h2>まとめ</h2>
-    </section>
+
+    <script type="module" src="src/index.js"></script>
   </body>
 </html>
